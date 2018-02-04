@@ -2,8 +2,9 @@
 //  ViewController.swift
 //  CurrencyConverter
 //
-//  Created by Mohamed Sobhi  Fouda on 2/3/18.
+//  Created by Mohamed Sobhi Fouda on 2/3/18.
 //  Copyright © 2018 Mohamed Sobhi  Fouda. All rights reserved.
+// All on Git repo now
 //
 
 import UIKit
