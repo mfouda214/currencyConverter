@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,103 +18,199 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pound-yen-euro-dollar.png" translatesAutoresizingMaskIntoConstraints="NO" id="Qa0-31-d2o">
-                                <rect key="frame" x="0.0" y="20" width="375" height="157"/>
-                            </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Dollar Amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gvo-lI-JAe">
-                                <rect key="frame" x="0.0" y="168" width="113" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pound:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="87l-C3-zHc">
-                                <rect key="frame" x="0.0" y="220" width="113" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yen:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DgO-sa-13X">
-                                <rect key="frame" x="0.0" y="249" width="113" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Euro:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpE-Dj-5f3">
-                                <rect key="frame" x="0.0" y="278" width="113" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66d-Z5-jgg">
-                                <rect key="frame" x="141" y="220" width="35" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vym-gb-0zF">
-                                <rect key="frame" x="141" y="248" width="35" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEF-bb-AAP">
-                                <rect key="frame" x="141" y="278" width="35" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TL1-1A-8OE">
-                                <rect key="frame" x="290" y="167" width="55" height="30"/>
-                                <state key="normal" title="Convert"/>
-                                <connections>
-                                    <action selector="convertCurrency:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7FF-rf-SE1"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mIm-sq-oHs">
-                                <rect key="frame" x="301" y="318" width="34" height="30"/>
-                                <state key="normal" title="clear"/>
-                                <connections>
-                                    <action selector="clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M07-aO-9mS"/>
-                                    <action selector="convertCurrency:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h6Z-tV-MMG"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xyO-8S-cHv">
+                                <rect key="frame" x="20" y="40" width="335" height="427"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pound-yen-euro-dollar.png" translatesAutoresizingMaskIntoConstraints="NO" id="Qa0-31-d2o">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="135.5"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Zst-sF-7Lj">
+                                        <rect key="frame" x="0.0" y="145.5" width="335" height="136"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Dollar Amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gvo-lI-JAe">
+                                                <rect key="frame" x="0.0" y="53" width="187.5" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                </variation>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TL1-1A-8OE">
+                                                <rect key="frame" x="187.5" y="53" width="91" height="30"/>
+                                                <state key="normal" title="Convert"/>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="convertCurrency:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7FF-rf-SE1"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mIm-sq-oHs">
+                                                <rect key="frame" x="278.5" y="53" width="56.5" height="30"/>
+                                                <state key="normal" title="clear"/>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M07-aO-9mS"/>
+                                                    <action selector="convertCurrency:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h6Z-tV-MMG"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="uiD-bQ-Los">
+                                        <rect key="frame" x="0.0" y="291.5" width="335" height="135.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="c7l-RJ-276">
+                                                <rect key="frame" x="0.0" y="0.0" width="167.5" height="135.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pound:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="87l-C3-zHc">
+                                                        <rect key="frame" x="0.0" y="0.0" width="167.5" height="39.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=compact-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                        </variation>
+                                                        <variation key="heightClass=compact-widthClass=regular">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                        </variation>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yen:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DgO-sa-13X">
+                                                        <rect key="frame" x="0.0" y="47.5" width="167.5" height="40"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=compact-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                        </variation>
+                                                        <variation key="heightClass=compact-widthClass=regular">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                        </variation>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Euro:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpE-Dj-5f3">
+                                                        <rect key="frame" x="0.0" y="95.5" width="167.5" height="40"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=compact-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                        </variation>
+                                                        <variation key="heightClass=compact-widthClass=regular">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                        </variation>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="J6M-az-vcB">
+                                                <rect key="frame" x="167.5" y="0.0" width="167.5" height="135.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66d-Z5-jgg">
+                                                        <rect key="frame" x="0.0" y="0.0" width="167.5" height="45"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=compact-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                        </variation>
+                                                        <variation key="heightClass=compact-widthClass=regular">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                        </variation>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vym-gb-0zF">
+                                                        <rect key="frame" x="0.0" y="45" width="167.5" height="45.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=compact-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                        </variation>
+                                                        <variation key="heightClass=compact-widthClass=regular">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                        </variation>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEF-bb-AAP">
+                                                        <rect key="frame" x="0.0" y="90.5" width="167.5" height="45"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=compact-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                        </variation>
+                                                        <variation key="heightClass=compact-widthClass=regular">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                        </variation>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Qa0-31-d2o" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1Gj-33-9PM"/>
-                            <constraint firstItem="66d-Z5-jgg" firstAttribute="baseline" secondItem="87l-C3-zHc" secondAttribute="baseline" id="3qa-XG-CHr"/>
-                            <constraint firstItem="66d-Z5-jgg" firstAttribute="leading" secondItem="87l-C3-zHc" secondAttribute="trailing" constant="28" id="4Ml-fm-aK6"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="66d-Z5-jgg" secondAttribute="trailing" constant="199" id="5Cd-L0-2w2"/>
-                            <constraint firstItem="87l-C3-zHc" firstAttribute="top" secondItem="gvo-lI-JAe" secondAttribute="bottom" constant="22" id="5G5-uY-tqf"/>
-                            <constraint firstItem="Qa0-31-d2o" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="7fm-UE-6tj"/>
-                            <constraint firstItem="DgO-sa-13X" firstAttribute="top" secondItem="87l-C3-zHc" secondAttribute="bottom" constant="8" id="86c-lG-BZX"/>
-                            <constraint firstItem="mIm-sq-oHs" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9F8-kh-ZYb"/>
-                            <constraint firstItem="Vym-gb-0zF" firstAttribute="baseline" secondItem="DgO-sa-13X" secondAttribute="baseline" constant="-1" id="FD8-Jn-mZD"/>
-                            <constraint firstItem="gvo-lI-JAe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="148" id="GjN-Le-dqS"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TL1-1A-8OE" secondAttribute="trailing" constant="30" id="Gos-YP-CpQ"/>
-                            <constraint firstItem="zpE-Dj-5f3" firstAttribute="width" secondItem="gvo-lI-JAe" secondAttribute="width" id="LrA-4z-Eg2"/>
-                            <constraint firstItem="TL1-1A-8OE" firstAttribute="leading" secondItem="gvo-lI-JAe" secondAttribute="trailing" constant="177" id="Ojt-mM-yJ7"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TL1-1A-8OE" secondAttribute="trailing" constant="30" id="PXo-Rm-0T9"/>
-                            <constraint firstItem="zpE-Dj-5f3" firstAttribute="top" secondItem="DgO-sa-13X" secondAttribute="bottom" constant="8" id="PYj-MU-FSU"/>
-                            <constraint firstItem="gvo-lI-JAe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" multiplier="0.5" id="Tqd-w1-oxF"/>
-                            <constraint firstItem="TL1-1A-8OE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="147" id="U9V-Ga-zk1"/>
-                            <constraint firstItem="TL1-1A-8OE" firstAttribute="leading" secondItem="gvo-lI-JAe" secondAttribute="trailing" constant="177" id="WZf-H8-zQJ"/>
-                            <constraint firstItem="JEF-bb-AAP" firstAttribute="baseline" secondItem="zpE-Dj-5f3" secondAttribute="baseline" id="ZIu-Il-oOK"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vym-gb-0zF" secondAttribute="trailing" constant="199" id="cOk-DV-lcc"/>
-                            <constraint firstItem="Qa0-31-d2o" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="dcI-cz-9T9"/>
-                            <constraint firstItem="TL1-1A-8OE" firstAttribute="baseline" secondItem="gvo-lI-JAe" secondAttribute="baseline" id="ePQ-80-SuY"/>
-                            <constraint firstItem="DgO-sa-13X" firstAttribute="width" secondItem="gvo-lI-JAe" secondAttribute="width" id="exm-tM-s2v"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qa0-31-d2o" secondAttribute="trailing" id="hgU-TW-pHU"/>
-                            <constraint firstItem="DgO-sa-13X" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="j5x-U1-64K"/>
-                            <constraint firstItem="zpE-Dj-5f3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="k39-EC-uNE"/>
-                            <constraint firstItem="mIm-sq-oHs" firstAttribute="centerX" secondItem="TL1-1A-8OE" secondAttribute="centerX" id="nIs-CG-qtV"/>
-                            <constraint firstItem="87l-C3-zHc" firstAttribute="width" secondItem="gvo-lI-JAe" secondAttribute="width" id="pId-Pg-7FG"/>
-                            <constraint firstItem="87l-C3-zHc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="syH-Md-wGe"/>
-                            <constraint firstItem="JEF-bb-AAP" firstAttribute="leading" secondItem="zpE-Dj-5f3" secondAttribute="trailing" constant="28" id="tgZ-W5-N7F"/>
-                            <constraint firstItem="Vym-gb-0zF" firstAttribute="leading" secondItem="DgO-sa-13X" secondAttribute="trailing" constant="28" id="vH8-Rm-jgL"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JEF-bb-AAP" secondAttribute="trailing" constant="199" id="xUT-MP-xT8"/>
+                            <constraint firstItem="xyO-8S-cHv" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="20" id="4K3-mK-EMt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xyO-8S-cHv" secondAttribute="bottom" constant="200" id="ImL-zJ-oNi"/>
+                            <constraint firstAttribute="bottom" secondItem="xyO-8S-cHv" secondAttribute="bottom" id="LSx-81-D1F"/>
+                            <constraint firstAttribute="bottom" secondItem="xyO-8S-cHv" secondAttribute="bottom" constant="20" id="OvV-As-7Tk"/>
+                            <constraint firstAttribute="trailing" secondItem="xyO-8S-cHv" secondAttribute="trailing" constant="20" id="Z3T-yF-WWU"/>
+                            <constraint firstItem="xyO-8S-cHv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="haV-GI-3xI"/>
+                            <constraint firstItem="xyO-8S-cHv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="n5s-oC-QJA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="4K3-mK-EMt"/>
+                                <exclude reference="LSx-81-D1F"/>
+                                <exclude reference="OvV-As-7Tk"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="ImL-zJ-oNi"/>
+                                <exclude reference="4K3-mK-EMt"/>
+                                <exclude reference="LSx-81-D1F"/>
+                                <include reference="OvV-As-7Tk"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="euroLabel" destination="JEF-bb-AAP" id="136-E2-sEd"/>
