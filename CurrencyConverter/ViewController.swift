@@ -11,7 +11,9 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate, UIPopoverPresentationControllerDelegate {
 
+    let plistUrl = Bundle.main.url(forResource: "Reasons", withExtension: "plist")
     let fileManager = FileManager.default
+    var reasons: [Dictionary<String, Any>]?
     
     let poundRate = 0.69
     let yenRate = 113.94
@@ -23,11 +25,50 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPopoverPresentati
         // Do any additional setup after loading the view, typically from a nib.
         inputTextField.delegate = self
         Reason.delegate = self
+        
+        if fileExistsInDocumentsDirectory() == false {
+            seedDataToDocumentsDirectory()
+        }
+        
+
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func documentsDirectoryFileURL() -> URL? {
+        do {
+            let document = try fileManager.url(for: FileManager.SearchPathDirectory.documentDirectory, in: FileManager.SearchPathDomainMask.userDomainMask, appropriateFor: nil, create: false)
+            let file = document.appendingPathComponent("Reasons.plist")
+            return file
+        } catch {
+            print("Error getting file path.")
+            return nil
+        }
+    }
+    
+    func fileExistsInDocumentsDirectory() -> Bool {
+        if let file = documentsDirectoryFileURL() {
+            let fileExists = FileManager().fileExists(atPath: file.path)
+            return fileExists
+        }
+        
+        return false
+    }
+    
+    func seedDataToDocumentsDirectory() {
+        do {
+            let plistData = try Data(contentsOf: plistUrl!)
+            
+            if let file = documentsDirectoryFileURL() {
+                try plistData.write(to: file)
+            }
+        } catch {
+            print("Error writing file.")
+        }
     }
 
     // Called when 'return' key is pressed
@@ -82,20 +123,32 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPopoverPresentati
     }
     
     @IBAction func Save(_ sender: Any) {
+        
+        var plistFormat = PropertyListSerialization.PropertyListFormat.xml
+        
         do {
-            let documents = try fileManager.url(for: FileManager.SearchPathDirectory.documentDirectory, in: FileManager.SearchPathDomainMask.userDomainMask, appropriateFor: nil, create: false)
+            let plistData = try Data(contentsOf: documentsDirectoryFileURL()!)
+            reasons = try PropertyListSerialization.propertyList(from: plistData, options: [], format: &plistFormat) as? [Dictionary<String, Any>]
             
-            print(documents)
-            let url = URL(string: "Reason.txt", relativeTo: documents)
-            let stringToWrite = Reason.text
-            if let url = url {
-                try stringToWrite?.write(to: url, atomically: true, encoding: String.Encoding.utf8)
-                let textFromFile = try String(contentsOf: url)
-                print(textFromFile)
+            if var reasons = reasons {
+                for reason in reasons {
+                    print("Reason: \(String(describing: reason["Reason"])), Amount: \(String(describing: reason["Amount"]))")
+                }
+                
+                let anotherReason = ["Reason" : Reason.text, "Amount" : inputTextField.text] as [String : Any]
+                
+                reasons.append(anotherReason)
+                
+                let serializedData = try PropertyListSerialization.data(fromPropertyList: reasons, format: PropertyListSerialization.PropertyListFormat.xml, options: 0)
+                if let file = documentsDirectoryFileURL() {
+                    try serializedData.write(to: file)
+                    print(file)
+                }
             }
         } catch {
-            print("Error getting path")
+            print("Error")
         }
+        
     }
     
     @IBOutlet weak var poundLabel: UILabel!

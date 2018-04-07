@@ -13,6 +13,7 @@
 		D4124CDD20261EE40059B508 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4124CDC20261EE40059B508 /* Assets.xcassets */; };
 		D4124CE020261EE40059B508 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4124CDE20261EE40059B508 /* LaunchScreen.storyboard */; };
 		D4124CE820263B110059B508 /* pound-yen-euro-dollar.png in Resources */ = {isa = PBXBuildFile; fileRef = D4124CE720263B110059B508 /* pound-yen-euro-dollar.png */; };
+		D4BEACB920793788001FE553 /* Reasons.plist in Resources */ = {isa = PBXBuildFile; fileRef = D4BEACB820793788001FE553 /* Reasons.plist */; };
 		D4E1D47B20780EF7003C68AE /* ShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E1D47A20780EF7003C68AE /* ShowViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		D4124CDF20261EE40059B508 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4124CE120261EE40059B508 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4124CE720263B110059B508 /* pound-yen-euro-dollar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pound-yen-euro-dollar.png"; sourceTree = "<group>"; };
+		D4BEACB820793788001FE553 /* Reasons.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Reasons.plist; sourceTree = "<group>"; };
 		D4E1D47A20780EF7003C68AE /* ShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,6 +67,7 @@
 				D4124CDE20261EE40059B508 /* LaunchScreen.storyboard */,
 				D4124CE720263B110059B508 /* pound-yen-euro-dollar.png */,
 				D4E1D47A20780EF7003C68AE /* ShowViewController.swift */,
+				D4BEACB820793788001FE553 /* Reasons.plist */,
 				D4124CE120261EE40059B508 /* Info.plist */,
 			);
 			path = CurrencyConverter;
@@ -129,6 +132,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4BEACB920793788001FE553 /* Reasons.plist in Resources */,
 				D4124CE020261EE40059B508 /* LaunchScreen.storyboard in Resources */,
 				D4124CDD20261EE40059B508 /* Assets.xcassets in Resources */,
 				D4124CE820263B110059B508 /* pound-yen-euro-dollar.png in Resources */,
