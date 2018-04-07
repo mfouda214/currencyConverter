@@ -11,16 +11,34 @@ import UIKit
 class ShowViewController: UIViewController {
 
 
+    let plistUrl = Bundle.main.url(forResource: "Reasons", withExtension: "plist")
     let fileManager = FileManager.default
+    var reasons: [Dictionary<String, Any>]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
         
+        var plistFormat = PropertyListSerialization.PropertyListFormat.xml
+        ShowText.text = ""
+        do {
+            let plistData = try Data(contentsOf: documentsDirectoryFileURL()!)
+            reasons = try PropertyListSerialization.propertyList(from: plistData, options: [], format: &plistFormat) as? [Dictionary<String, Any>]
+            
+            if let reasons = reasons {
+                for reason in reasons {
+                    print("Reason: \(String(describing: reason["Reason"])), Amount: \(String(describing: reason["Amount"]))")
+                    
+                    ShowText.text = ShowText.text + "Reason: \(String(describing: reason["Reason"])) \nAmount: \(String(describing: reason["Amount"]))$"
+                    ShowText.text = ShowText.text + "\n" + "\n"
+                }
+                
+            }
+        } catch {
+            print("Error")
+        }
         
-        
-        ShowText.text = FileSaved()
 
     }
 
@@ -31,24 +49,36 @@ class ShowViewController: UIViewController {
     
     @IBOutlet weak var ShowText: UITextView!
     
-    func FileSaved() -> String{
+    func documentsDirectoryFileURL() -> URL? {
         do {
-            let documents = try fileManager.url(for: FileManager.SearchPathDirectory.documentDirectory, in: FileManager.SearchPathDomainMask.userDomainMask, appropriateFor: nil, create: false)
-            
-            print(documents)
-            let url = URL(string: "Reason.txt", relativeTo: documents)
+            let document = try fileManager.url(for: FileManager.SearchPathDirectory.documentDirectory, in: FileManager.SearchPathDomainMask.userDomainMask, appropriateFor: nil, create: false)
+            let file = document.appendingPathComponent("Reasons.plist")
+            return file
+        } catch {
+            print("Error getting file path.")
+            return nil
+        }
+    }
     
-            if let url = url {
-                
-                let textFromFile = try String(contentsOf: url)
-                let text = textFromFile
-                
-                return text
+    func fileExistsInDocumentsDirectory() -> Bool {
+        if let file = documentsDirectoryFileURL() {
+            let fileExists = FileManager().fileExists(atPath: file.path)
+            return fileExists
+        }
+        
+        return false
+    }
+    
+    func seedDataToDocumentsDirectory() {
+        do {
+            let plistData = try Data(contentsOf: plistUrl!)
+            
+            if let file = documentsDirectoryFileURL() {
+                try plistData.write(to: file)
             }
         } catch {
-            print("Error getting path")
+            print("Error writing file.")
         }
-        return "nil"
     }
 
     /*
